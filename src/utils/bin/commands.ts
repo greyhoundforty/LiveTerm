@@ -1,5 +1,7 @@
 // List of commands that do not require API calls
 
+
+
 import * as bin from './index';
 import config from '../../../config.json';
 
@@ -125,6 +127,9 @@ export const nvim = async (args: string[]): Promise<string> => {
 export const emacs = async (args?: string[]): Promise<string> => {
   return `you know what? just use vscode.`;
 };
+
+
+
 
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
