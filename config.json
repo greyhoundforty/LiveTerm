@@ -3,13 +3,16 @@
   "title": "ryan tiffany dot dev",
   "name": "Ryan Tiffany",
   "ascii": "rst",
+  "jobTitle": "Cloud Design Engineer at IBM",
   "social": {
     "github": "greyhoundforty",
     "linkedin": "ryan-tiffany-786a036a",
-    "threads": "greyhoundforty"
+    "threads": "greyhoundforty",
+    "twitter": "sh10rbital",
+    "mastadon": ""
   },
   "email": "admin@ryantiffany.dev",
-  "ps1_hostname": "the-good-place",
+  "ps1_hostname": "rt.dev",
   "ps1_username": "visitor",
   "repo": "https://github.com/greyhoundforty/LiveTerm",
   "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",

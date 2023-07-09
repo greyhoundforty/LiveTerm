@@ -1,5 +1,5 @@
 // List of commands that do not require API calls
-
+import {FaFontAwesome} from "react-icons/fa"
 
 
 import * as bin from './index';
@@ -33,10 +33,9 @@ export const repo = async (args: string[]): Promise<string> => {
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
-Welcome to my website!
+Welcome to my playground
 More about me:
 'sumfetch' - short summary.
-'resume' - my latest resume.
 'readme' - my github readme.`;
 };
 
@@ -63,6 +62,12 @@ export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
 
   return 'Opening linkedin...';
+};
+
+export const twitter = async (args: string[]): Promise<string> => {
+  window.open(`https://www.twitter.com/${config.social.twitter}/`);
+
+  return `Opening twitter...`;
 };
 
 // Search
@@ -137,15 +142,29 @@ export const sudo = async (args?: string[]): Promise<string> => {
 };
 
 // Banner
+// export const banner = (args?: string[]): string => {
+//   return `
+//   ████████╗██╗  ██╗███████╗     ██████╗ ██╗   ██╗███████╗███████╗████████╗
+//   ╚══██╔══╝██║  ██║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
+//      ██║   ███████║█████╗      ██║   ██║██║   ██║█████╗  ███████╗   ██║   
+//      ██║   ██╔══██║██╔══╝      ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║   
+//      ██║   ██║  ██║███████╗    ╚██████╔╝╚██████╔╝███████╗███████║   ██║   
+//      ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   
+                                                                          
+// Type 'help' to see the list of available commands.
+// Type 'sumfetch' to display summary.
+// Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+// `;
+// };
 export const banner = (args?: string[]): string => {
   return `
-  ████████╗██╗  ██╗███████╗     ██████╗ ██╗   ██╗███████╗███████╗████████╗
-  ╚══██╔══╝██║  ██║██╔════╝    ██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
-     ██║   ███████║█████╗      ██║   ██║██║   ██║█████╗  ███████╗   ██║   
-     ██║   ██╔══██║██╔══╝      ██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║   
-     ██║   ██║  ██║███████╗    ╚██████╔╝╚██████╔╝███████╗███████║   ██║   
-     ╚═╝   ╚═╝  ╚═╝╚══════╝     ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   
-                                                                          
+  ██████╗ ████████╗        ██╗    ██████╗ ███████╗██╗   ██╗
+  ██╔══██╗╚══██╔══╝       ██╔╝    ██╔══██╗██╔════╝██║   ██║
+  ██████╔╝   ██║         ██╔╝     ██║  ██║█████╗  ██║   ██║
+  ██╔══██╗   ██║        ██╔╝      ██║  ██║██╔══╝  ╚██╗ ██╔╝
+  ██║  ██║   ██║       ██╔╝       ██████╔╝███████╗ ╚████╔╝ 
+  ╚═╝  ╚═╝   ╚═╝       ╚═╝        ╚═════╝ ╚══════╝  ╚═══╝  
+   
 Type 'help' to see the list of available commands.
 Type 'sumfetch' to display summary.
 Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
